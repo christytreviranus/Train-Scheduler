@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+</head>
+<body>
+    <!-- Jumbotron -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Train Scheduler</h1>
+            <hr class="my-2">
+            <p class="lead">Looking to travel somewhere by train?</p>
+        </div>
+    </div>
+    
+    <!-- Card for Schedules -->
+    <div class="container">
+    <div class="card">
+            <div class="card-header">
+              Current Train Schedules
+            </div>
+            <div class="card-body">
+              
+            </div>
+          </div>
+        </div>
+    
+    <!-- Card for Adding Trains -->
+    <div class="container">
+            <div class="card">
+                    <div class="card-header">
+                      Add a Train
+                    </div>
+                    <div class="card-body">
+                        <label for="train-name">Train Name: </label>
+                        <input class="form-control form-control-lg" type="text" placeholder="Enter Train Name Here">
+
+                        <label for="destination">Destination: </label>
+                        <input class="form-control form-control-lg" type="text" placeholder="Enter Destination">
+
+                        <label for="train-time">First Train Time (24-hr Time): </label>
+                        <input class="form-control form-control-lg" type="text" placeholder="Enter military time for train">
+
+                        <label for="frequency">Frequency (in minutes): </label>
+                        <input class="form-control form-control-lg" type="text" placeholder="Enter frequency of train in minutes">
+
+                        <button type="button" class="btn btn-info">Submit</button>
+                    </div>
+                  </div>
+                </div>
+
+     <!-- JavaScript / JQuery -->
+     <script src="https://code.jquery.com/jquery-3.4.1.js"
+     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+     crossorigin="anonymous"></script>
+       <!-- Custom JavaScript / JQuery -->
+       <script type="text/javascript" src="/assets/javascript/train.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+           integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+           crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+           crossorigin="anonymous"></script>
+</body>
+</html>
