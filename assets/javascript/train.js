@@ -46,6 +46,14 @@ $("#frequency").val(sessionStorage.getItem("frequency"));
 $("#submit").on("click", function (event) {
   event.preventDefault();
 
+  if ($("#train-name").val().trim() === "" ||
+    $("#destination").val().trim() === "" ||
+    $("#train-time").val().trim() === "" ||
+    $("#frequency").val().trim() === "") {
+      
+    $("#error-message").html("Please fill in all fields to add a new train");
+  } else {
+
   trainName = $("#train-name").val().trim();
   destination = $("#destination").val().trim();
   trainTime = $("#train-time").val().trim();
@@ -96,24 +104,6 @@ $(document).on("click", ".remove", function () {
   window.location.reload();
 });
 
-// Disable form submissions if there are invalid fields
-(function () {
-  'use strict';
-  window.addEventListener('load', function () {
-    // Get the forms we want to add validation styles to
-    let forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    let validation = Array.prototype.filter.call(forms, function (form) {
-      form.addEventListener('submit', function (event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
 
 //Real Time Clock on page
 let update;
