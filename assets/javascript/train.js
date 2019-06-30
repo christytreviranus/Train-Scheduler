@@ -111,3 +111,4 @@ let update;
   document.getElementById("currentTime").innerHTML = moment().format('MMMM DD, YYYY -- hh:mm:ss A');
 })();
 setInterval(update, 1000);
+});
