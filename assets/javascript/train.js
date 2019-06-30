@@ -73,7 +73,7 @@ $("#submit").on("click", function (event) {
 
   //Clear session storage after Firebase data pushed
   sessionStorage.clear();
-});
+};
 
 //Firebase Child Added Snapshot
 database.ref().on("child_added", function (childSnapshot) {
