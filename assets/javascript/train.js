@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 //Declare variable for Firebase database
 let database = firebase.database();
 
-//Declare letiables for Train data
+//Declare variables for Train data
 
 let trainName = '';
 let destination = '';
@@ -73,7 +73,9 @@ $("#submit").on("click", function (event) {
 
   //Clear session storage after Firebase data pushed
   sessionStorage.clear();
-};
+}
+
+});
 
 //Firebase Child Added Snapshot
 database.ref().on("child_added", function (childSnapshot) {
@@ -111,4 +113,3 @@ let update;
   document.getElementById("currentTime").innerHTML = moment().format('MMMM DD, YYYY -- hh:mm:ss A');
 })();
 setInterval(update, 1000);
-});
