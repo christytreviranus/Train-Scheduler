@@ -60,26 +60,30 @@
       </div>
 
       <div class="card-body">
-        <form>
+        <form action="/action_page.php" class="needs-validation" novalidate>
           <div class="form-group">
             <label>Train Name: </label>
-            <input type="text" class="form-control form-control-lg form-field" placeholder="Amtrak" required
-              id="train-name">
+            <input type="text" class="form-control form-control-lg form-field" placeholder="Amtrak"
+              id="train-name" required>
+              <div class="invalid-feedback">Please fill out this field.</div>
           </div>
           <div class="form-group">
             <label>Destination: </label>
-            <input type="text" class="form-control form-control-lg form-field" placeholder="Phoenix" required
-              id="destination">
+            <input type="text" class="form-control form-control-lg form-field" placeholder="Phoenix"
+              id="destination" required>
+              <div class="invalid-feedback">Please fill out this field.</div>
           </div>
           <div class="form-group">
-            <label>First Train Time (24-hr Time):</label>
+            <label>First Train Time (HH:mm - 24hr format):</label>
             <input type="text" class="form-control form-control-lg form-field"
-              placeholder="Enter time in 24hr format (i.e. 1700)" required id="train-time">
+              placeholder="Enter time in 24hr format (i.e. 17:00)" id="train-time" required>
+              <div class="invalid-feedback">Please fill out this field.</div>
           </div>
           <div class="form-group">
             <label>Frequency (in minutes):</label>
             <input type="text" class="form-control form-control-lg form-field"
-              placeholder="Enter frequency in minutes (i.e. 60)" required id="frequency">
+              placeholder="Enter frequency in minutes (i.e. 60)" id="frequency" required>
+              <div class="invalid-feedback">Please fill out this field.</div>
           </div>
           <button type="submit" class="btn btn-default" id="submit">Submit</button>
         </form>
